@@ -1,0 +1,106 @@
+:root {
+  --background-color: white;
+  --popup-main-text-color: #333333;
+  --link-color: #2284f7;
+  --popup-link-hovered: #ce0707;
+  --popup-accent-color: var(--popup-main-text-color);
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-size: 16px;
+  font-style: normal;
+  font-family: "Lato", Arial, sans-serif;
+  padding: 25px 10px 10px 25px;
+  color: var(--popup-main-text-color);
+  background-color: var(--background-color);
+  max-width: 500px;
+  margin: auto;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+    display: block;
+}
+
+.header {
+  font-weight: bold;
+}
+
+.header-logo {
+  height: 64px;
+  width: auto;
+  vertical-align: middle;
+}
+
+.header-title {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.github-link {
+  font-size: 14px;
+  display: flex;
+  color: var(--popup-accent-color);
+  opacity: 0.5;
+}
+
+.github-link:hover {
+  color: var(--popup-accent-color);
+  opacity: 1;
+}
+
+.github-link:focus {
+  outline: var(--link-color) auto 5px;
+  opacity: 1;
+}
+
+a {
+  color: var(--link-color);
+}
+a:hover {
+  font-weight: bold;
+  color: var(--popup-link-hovered);
+}
+
+.item-read {
+  font-size: 16px;
+}
+
+.paragraph-title {
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 29px;
+    margin-top: 25px;
+    padding-bottom: 10px;
+}
+
+#titletext {
+  padding: 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#pages-read-count {
+  font-weight: bold;
+}
+
+#read-pages {
+  overflow-x:auto;
+  overflow-y:auto;
+  display: block;
+}

@@ -1,0 +1,58 @@
+{
+  "name": "SCP Read Tracker",
+  "version": "1.0",
+  "description": "Tracks which SCP articles you've read",
+  "icons": {
+    "16": "images/icon_16.png",
+    "32": "images/icon_32.png",
+    "48": "images/icon_48.png",
+    "128": "images/icon_128.png"
+  },
+    "background": {
+    "scripts": ["js/background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.scp-wiki.wikidot.com/*",
+        "*://*.scp-wiki.net/*",
+        "*://*.scpwiki.com/*",
+        "*://scp-cs.wikidot.com/*",
+        "*://fondationscp.wikidot.com/*",
+        "*://scp-wiki-de.wikidot.com/*",
+        "*://fondazionescp.wikidot.com/*",
+        "*://scp-wiki.net.pl/*",
+        "*://scp-pt-br.wikidot.com/*",
+        "*://lafundacionscp.wikidot.com/*",
+        "*://scp-th.wikidot.com/*",
+        "*://scp-ukrainian.wikidot.com/*"
+      ],
+      "js": [
+        "lib/jquery-3.5.1.min.js",
+        "js/bit-array.js",
+        "js/statemanager.js",
+        "js/content-script.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "storage",
+    "activeTab",
+    "tabs"
+  ],
+  "browser_action": {
+      "default_name": "Display Map",
+      "default_icon": {
+	    "16": "images/icon_16.png",
+	    "32": "images/icon_32.png",
+	    "48": "images/icon_48.png",
+	    "128": "images/icon_128.png"
+	  }
+  },
+  "web_accessible_resources": [
+    "images/*"
+  ],
+  "manifest_version": 2,
+  "content_security_policy": "default-src 'none'; style-src 'self'; script-src 'self'"
+}
