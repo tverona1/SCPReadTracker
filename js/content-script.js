@@ -15,11 +15,11 @@ function processScpPage() {
     return;
   }
 
-  // Also match on 'scp' tag
+  // Also match on 'scp' tag, except for scp-001 which doesn't have a tag
   const scpTag = $('div.page-tags span a').filter(function () {
     return $(this).text().toLowerCase().trim() === 'scp';
   });
-  if (scpTag.length === 0) {
+  if (!url.includes('/scp-001') && scpTag.length === 0) {
     return;
   }
 
@@ -47,6 +47,9 @@ function setImage(isRead) {
   const imgUrl = chrome.runtime.getURL(isRead ? 'images/page_read.png' : 'images/page_unread.png');
   const imgAlt = isRead ? 'Page read' : 'Page unread';
   const img = `<img id="${imgId}" alt="${imgAlt}" src="${imgUrl}">`;
+
+  // Force page title to show
+  $('div#page-title').show();
 
   var imgElement = undefined;
   if ($(`img#${imgId}`).length === 0) {
