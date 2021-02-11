@@ -1,6 +1,6 @@
 {
   "name": "SCP Read Tracker",
-  "version": "1.0",
+  "version": "1.1",
   "description": "Tracks which SCP articles you've read",
   "icons": {
     "16": "images/icon_16.png",
