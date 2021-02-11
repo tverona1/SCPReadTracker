@@ -37,9 +37,7 @@
     }
   ],
   "permissions": [
-    "storage",
-    "activeTab",
-    "tabs"
+    "storage"
   ],
   "browser_action": {
       "default_name": "Display Map",
